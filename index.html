@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arena Incremental RPG</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>⚔️ Arena Incremental RPG</h1>
+
+    <div class="panel">
+      <h2>Player</h2>
+      <p>Level: <span id="level">1</span></p>
+      <p>XP: <span id="xp">0</span> / <span id="xpNeeded">10</span></p>
+      <p>Gold: <span id="gold">0</span></p>
+      <p>HP: <span id="hp">100</span> / <span id="maxHp">100</span></p>
+      <p>Attack: <span id="attack">5</span></p>
+      <p>Defense: <span id="defense">2</span></p>
+      <p>Crit Chance: <span id="crit">5</span>%</p>
+    </div>
+
+    <div class="panel">
+      <h2>Enemy</h2>
+      <p>Name: <span id="enemyName">Slime</span></p>
+      <p>Level: <span id="enemyLevel">1</span></p>
+      <p>HP: <span id="enemyHp">20</span> / <span id="enemyMaxHp">20</span></p>
+      <p>Attack: <span id="enemyAttack">3</span></p>
+    </div>
+
+    <div class="buttons">
+      <button onclick="attackEnemy()">⚔️ Attack</button>
+      <button onclick="healPlayer()">❤️ Heal</button>
+      <button onclick="toggleAutoBattle()">🤖 Toggle Auto Battle</button>
+    </div>
+
+    <div class="panel">
+      <h2>Upgrades</h2>
+
+      <button onclick="upgradeAttack()">
+        Increase Attack (Cost: <span id="attackCost">10</span>)
+      </button>
+
+      <button onclick="upgradeDefense()">
+        Increase Defense (Cost: <span id="defenseCost">10</span>)
+      </button>
+
+      <button onclick="upgradeMaxHp()">
+        Increase Max HP (Cost: <span id="hpCost">15</span>)
+      </button>
+
+      <button onclick="upgradeCrit()">
+        Increase Crit Chance (Cost: <span id="critCost">25</span>)
+      </button>
+    </div>
+
+    <div class="panel">
+      <h2>Prestige</h2>
+      <p>Prestige Points: <span id="prestige">0</span></p>
+      <button onclick="prestigeReset()">🌟 Prestige Reset</button>
+    </div>
+
+    <div class="panel">
+      <h2>Achievements</h2>
+      <ul id="achievementList"></ul>
+    </div>
+
+    <div class="panel log-panel">
+      <h2>Battle Log</h2>
+      <div id="log"></div>
+    </div>
+
+    <div class="buttons">
+      <button onclick="saveGame()">💾 Save</button>
+      <button onclick="loadGame()">📂 Load</button>
+      <button onclick="resetGame()">🗑️ Reset</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
