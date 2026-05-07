@@ -20,6 +20,7 @@
       <p>Attack: <span id="attack"></span></p>
       <p>Defense: <span id="defense"></span></p>
       <p>Crit Chance: <span id="crit"></span>%</p>
+      <p>Prestige: <span id="prestige"></span></p>
     </div>
 
     <div class="panel">
@@ -32,18 +33,35 @@
 
     <div class="buttons">
       <button onclick="attackEnemy()">⚔️ Attack</button>
-      <button onclick="healPlayer()">❤️ Heal</button>
+      <button onclick="healPlayer()">❤️ Heal (5 gold)</button>
       <button onclick="toggleAutoBattle()">🤖 Toggle Auto Battle</button>
     </div>
 
     <div class="panel">
       <h2>Upgrades</h2>
-      <button onclick="upgradeAttack()">Attack (Cost <span id="attackCost"></span>)</button>
-      <button onclick="upgradeDefense()">Defense (Cost <span id="defenseCost"></span>)</button>
-      <button onclick="upgradeMaxHp()">HP (Cost <span id="hpCost"></span>)</button>
-      <button onclick="upgradeCrit()">Crit (Cost <span id="critCost"></span>)</button>
+      <button onclick="upgradeAttack()">Attack (+2, 10g)</button>
+      <button onclick="upgradeDefense()">Defense (+1, 10g)</button>
+      <button onclick="upgradeMaxHp()">Max HP (+20, 15g)</button>
+      <button onclick="upgradeCrit()">Crit (+2%, 20g)</button>
     </div>
 
     <div class="panel">
       <h2>Prestige</h2>
-      <p>Points: <span id="prestige"></span></p>
+      <button onclick="prestigeReset()">🌟 Prestige Reset (lvl 10+)</button>
+    </div>
+
+    <div class="panel">
+      <h2>Log</h2>
+      <div id="log"></div>
+    </div>
+
+    <div class="buttons">
+      <button onclick="saveGame()">💾 Save</button>
+      <button onclick="loadGame()">📂 Load</button>
+      <button onclick="resetGame()">🗑️ Reset</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
