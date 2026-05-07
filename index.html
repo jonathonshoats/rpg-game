@@ -13,21 +13,21 @@
 
     <div class="panel">
       <h2>Player</h2>
-      <p>Level: <span id="level">1</span></p>
-      <p>XP: <span id="xp">0</span> / <span id="xpNeeded">10</span></p>
-      <p>Gold: <span id="gold">0</span></p>
-      <p>HP: <span id="hp">100</span> / <span id="maxHp">100</span></p>
-      <p>Attack: <span id="attack">5</span></p>
-      <p>Defense: <span id="defense">2</span></p>
-      <p>Crit Chance: <span id="crit">5</span>%</p>
+      <p>Level: <span id="level"></span></p>
+      <p>XP: <span id="xp"></span> / <span id="xpNeeded"></span></p>
+      <p>Gold: <span id="gold"></span></p>
+      <p>HP: <span id="hp"></span> / <span id="maxHp"></span></p>
+      <p>Attack: <span id="attack"></span></p>
+      <p>Defense: <span id="defense"></span></p>
+      <p>Crit Chance: <span id="crit"></span>%</p>
     </div>
 
     <div class="panel">
       <h2>Enemy</h2>
-      <p>Name: <span id="enemyName">Slime</span></p>
-      <p>Level: <span id="enemyLevel">1</span></p>
-      <p>HP: <span id="enemyHp">20</span> / <span id="enemyMaxHp">20</span></p>
-      <p>Attack: <span id="enemyAttack">3</span></p>
+      <p>Name: <span id="enemyName"></span></p>
+      <p>Level: <span id="enemyLevel"></span></p>
+      <p>HP: <span id="enemyHp"></span> / <span id="enemyMaxHp"></span></p>
+      <p>Attack: <span id="enemyAttack"></span></p>
     </div>
 
     <div class="buttons">
@@ -38,47 +38,12 @@
 
     <div class="panel">
       <h2>Upgrades</h2>
-
-      <button onclick="upgradeAttack()">
-        Increase Attack (Cost: <span id="attackCost">10</span>)
-      </button>
-
-      <button onclick="upgradeDefense()">
-        Increase Defense (Cost: <span id="defenseCost">10</span>)
-      </button>
-
-      <button onclick="upgradeMaxHp()">
-        Increase Max HP (Cost: <span id="hpCost">15</span>)
-      </button>
-
-      <button onclick="upgradeCrit()">
-        Increase Crit Chance (Cost: <span id="critCost">25</span>)
-      </button>
+      <button onclick="upgradeAttack()">Attack (Cost <span id="attackCost"></span>)</button>
+      <button onclick="upgradeDefense()">Defense (Cost <span id="defenseCost"></span>)</button>
+      <button onclick="upgradeMaxHp()">HP (Cost <span id="hpCost"></span>)</button>
+      <button onclick="upgradeCrit()">Crit (Cost <span id="critCost"></span>)</button>
     </div>
 
     <div class="panel">
       <h2>Prestige</h2>
-      <p>Prestige Points: <span id="prestige">0</span></p>
-      <button onclick="prestigeReset()">🌟 Prestige Reset</button>
-    </div>
-
-    <div class="panel">
-      <h2>Achievements</h2>
-      <ul id="achievementList"></ul>
-    </div>
-
-    <div class="panel log-panel">
-      <h2>Battle Log</h2>
-      <div id="log"></div>
-    </div>
-
-    <div class="buttons">
-      <button onclick="saveGame()">💾 Save</button>
-      <button onclick="loadGame()">📂 Load</button>
-      <button onclick="resetGame()">🗑️ Reset</button>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+      <p>Points: <span id="prestige"></span></p>
